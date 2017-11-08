@@ -5,7 +5,6 @@ include_once('class/filetext.class.php');
 include_once('class/pdf.class.php');
 include_once('class/spider.class.php');
 Set_time_limit(0);
-//$domain = "http://127.0.0.1/progetti/rivetta";
 $domain = $_POST["domain"];
 //$startPage= '/';
 $startPage= $_POST["page"];

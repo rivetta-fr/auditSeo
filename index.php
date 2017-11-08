@@ -40,7 +40,7 @@ $("#auditform").on('submit',function(e) { // hancor home
   $('#btnsubmit').fadeOut('normal', function() {
     $("#output").html('<img id="loadingwait" src="images/loading.gif" alt="Loading&hellip;" >');
   });
-  var parameters = $("#auditform").serialize(); //recupera tutti i valori del form automaticamente
+  var parameters = $("#auditform").serialize(); //serialise form input values
   $.ajax({
       type: "post",
       url: "audit.php",
@@ -48,7 +48,7 @@ $("#auditform").on('submit',function(e) { // hancor home
       cache: false,
       success: function(htmldata){
         $('#btnsubmit').fadeIn('normal', function() {
-          $("#output").html(htmldata);
+          $("#output").html(htmldata); // show html data
         });
         $('html, body').animate({
           scrollTop: $("#output").offset().top// scroll on line in list edited
@@ -60,41 +60,3 @@ $("#auditform").on('submit',function(e) { // hancor home
 // END SCRIPT FOR  races page
 </script>
 </html>
-<?php
-
-
-/*
-$filename = 'doc/urllist.csv';
-if(!empty($list)){
-  $file = new filetext($filename,"w+");
-  $file->writedata($list);
-  unset($file);
-} else {
-  echo "<h2>Aucun fichier trouv&eacute;!</h2>";
-}
-*/
-//saveDataCSV($list, $domain);
-
-/*
-$pathBase = ".";
-$urlOrigin = "http://rivetta.fr";
-$fileSitemap = "titlemeta.html";
-$extensionsOk = array('php','asp','aspx','py','xhtml','phtml','php3');
-$foldersOk = array();
-$filesIgnores = array('404.php','403.php','500.php','footer.php');
-array_push($filesIgnores,basename(__FILE__));
-$crawler = fopen($fileSitemap,"w");
-fputs($crawler,"<!DOCTYPE html>\n");
-fputs($crawler,'<meta charset="UTF-8">'."\n");
-fputs($crawler,"<head>\n");
-fputs($crawler,'<style type="text/css">'. "\n");
-fputs($crawler,".green{color:green;}\n");
-fputs($crawler,'.red{color:red;}\n');
-fputs($crawler,'</style>'."\n");
-fputs($crawler,'</head>'."\n");
-fputs($crawler,'<body>');
-crawlFile($pathBase,$urlOrigin, $extensionsOk, $filesIgnores, $foldersOk);
-fputs($crawler, "</body>\n");
-fputs($crawler, "</html>");
-*/
-?>
