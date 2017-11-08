@@ -1,0 +1,49 @@
+section{
+  width:100%;
+  background-color: #FFFFFF;
+  }
+div{
+  padding:0.2em 0.5em;
+  border-bottom:1px solid #EEE;
+  background:#ddd;}
+  div.linehead{
+    color:#000;   }
+  div.linehead > div{border-bottom:none;}
+    span.line{
+      color:#444;
+      background:#ddd;
+      width:25%;
+    display:inline-block;
+    margin:0;
+    border: 1px solid #EEE;
+    box-sizing: border-box;
+    padding:0.2em 0.5em;
+    text-align:right;}
+    span.line b.valueone{
+      padding:0.2em 0.5em;
+      text-align:center;}
+    span.line b.valuemore{
+      color:green;
+      padding:0.2em 0.5em;
+      text-align:center;}
+.green{
+  color:green;}
+.red {
+  color:red;}
+h2{
+  clear:both;
+  width:100%;
+  background-color: blue;
+  color:white;
+  line-height:2;
+  text-align: center;
+margin:0;}
+#contentdwn{
+    background-color: blue;
+  clear:both;
+  width:100%;
+  padding:1em;
+  text-align:center;
+}
+#contentdwn a, #contentdwn a:link,  #contentdwn a:visited{color:#FFFFFF;}
+#contentdwn a:hover, #contentdwn a:focus,  #contentdwn a:active{color:#EEEEEE;}
